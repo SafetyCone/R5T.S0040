@@ -20,6 +20,17 @@ namespace R5T.S0040.Library
             return output;
         }
 
+        public string[] GetRepositoriesDirectoryPaths()
+        {
+            var output = new[]
+            {
+                @"C:\Code\DEV\Git\GitHub\SafetyCone",
+                @"C:\Code\DEV\Git\GitHub\davidcoats",
+            };
+
+            return output;
+        }
+
         public string[] GetAllRepositoryDirectoryPaths(string repositoriesDirectoryPath)
         {
             var output = Instances.FileSystemOperator.EnumerateAllChildDirectoryPaths(
