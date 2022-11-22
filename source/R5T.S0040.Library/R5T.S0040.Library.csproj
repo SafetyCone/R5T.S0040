@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.F0000\source\R5T.F0000\R5T.F0000.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0032.X0001\source\R5T.T0032.X0001.X002\R5T.T0032.X0001.X002.csproj" />
@@ -11,5 +10,4 @@
     <ProjectReference Include="..\..\..\R5T.T0044\source\R5T.T0044.X001\R5T.T0044.X001.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0132\source\R5T.T0132\R5T.T0132.csproj" />
   </ItemGroup>
-
 </Project>
