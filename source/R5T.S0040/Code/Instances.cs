@@ -15,6 +15,6 @@ namespace R5T.S0040
         public static IServiceAction ServiceAction { get; } = T0062.ServiceAction.Instance;
         public static T0040.ISolutionPathsOperator SolutionPathsOperator { get; } = T0040.SolutionPathsOperator.Instance;
         public static IXPathOperations XPathOperations { get; } = S0040.XPathOperations.Instance;
-        public static XPaths XPaths { get; } = XPaths.Instance;
+        public static IXPaths XPaths { get; } = S0040.XPaths.Instance;
     }
 }

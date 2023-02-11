@@ -12,7 +12,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 using R5T.Magyar;
-using R5T.Magyar.Extensions;
 using R5T.Magyar.Xml;
 
 using R5T.D0088;
@@ -166,7 +165,7 @@ namespace R5T.S0040
             }
 
             var outputLines = EnumerableHelper.From($"Project file paths rebuilt (Count: {projectFilePathsCount})\n")
-                .Append(projectFilePaths
+                .Append2(projectFilePaths
                     .Except(problemProjects)
                     .OrderAlphabetically());
 
@@ -222,7 +221,7 @@ namespace R5T.S0040
             }
 
             var outputLines = EnumerableHelper.From($"Project file paths now with <GenerateDocumentationFile> (Count: {projectFilePathsCount})\n")
-                .Append(projectFilePaths
+                .Append2(projectFilePaths
                     .Except(problemProjects)
                     .OrderAlphabetically());
 
@@ -290,7 +289,7 @@ namespace R5T.S0040
             var projectFilePathsOfInterestCount = projectFilePathsOfInterest.Count;
 
             var outputLines = EnumerableHelper.From($"Project file paths without <GenerateDocumentationFile> (Count: {projectFilePathsOfInterestCount} of {projectFilePathsCount})\n")
-                .Append(projectFilePathsOfInterest
+                .Append2(projectFilePathsOfInterest
                     .OrderAlphabetically());
 
             await FileHelper.WriteAllLines(
@@ -315,7 +314,7 @@ namespace R5T.S0040
             var projectFilePathsCount = projectFilePaths.Length;
 
             var outputLines = EnumerableHelper.From($"Project file paths (Count: {projectFilePathsCount})\n")
-                .Append(projectFilePaths
+                .Append2(projectFilePaths
                     .OrderAlphabetically());
 
             await FileHelper.WriteAllLines(
