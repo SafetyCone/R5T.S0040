@@ -55,7 +55,7 @@ namespace R5T.S0040.Library
             var output = solutionDirectoryPaths
                 .SelectMany(xSolutionDirectoryPath =>
                 {
-                    var directoryPathExists = Instances.FileSystemOperator.DirectoryExists(xSolutionDirectoryPath);
+                    var directoryPathExists = Instances.FileSystemOperator.Exists_Directory(xSolutionDirectoryPath);
 
                     var output = directoryPathExists
                         ? Instances.FileSystemOperator.EnumerateAllChildDirectoryPaths(
@@ -84,7 +84,7 @@ namespace R5T.S0040.Library
         {
             var projectFilePaths = Instances.FileSystemOperator.FindChildFilesInDirectoryByFileExtension(
                directoryPath,
-               Instances.FileExtension.CSharpProjectFile());
+               Instances.FileExtensions.CSharp_ProjectFile);
 
             return projectFilePaths;
         }
